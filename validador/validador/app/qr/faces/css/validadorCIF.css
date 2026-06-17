@@ -1,0 +1,31 @@
+.hide-column-names table thead th {
+    display: none;
+}
+
+.hide-column-names table td {
+    text-align: right;
+    white-space: normal;
+}
+
+/* Ajusta el texto en las celdas y permite quiebre de palabras largas */
+.hide-column-names table td {
+    text-align: right;
+    white-space: normal;
+    word-break: break-all;      /* Permite romper palabras largas */
+    overflow-wrap: anywhere;    /* Permite romper en cualquier punto si es necesario */
+    font-size: 1em;
+}
+
+/* Responsivo para pantallas menores a 600px */
+@media (max-width: 600px) {
+    .hide-column-names table,
+    .hide-column-names table td,
+    .hide-column-names table th {
+        font-size: 0.95em;
+        padding: 4px;
+    }
+    .hide-column-names table {
+        width: 100%;
+        table-layout: fixed;
+    }
+}
